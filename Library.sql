@@ -41,3 +41,32 @@ Fine_Amount Dec
 Alter Table Returns
 ADD Borrow_ID VarChar(50) references Borrow(Borrow_ID);
 
+Insert Into Author (Author_ID, Author_Name,Author_Nationality)
+Values 
+('1','Ramez Elmasri','USA'),
+('2', 'Joel Grus', 'USA'),
+('3','Mark Lutz','UK');
+
+Insert Into Members (Member_ID, Member_Name, Member_Phone)
+Values 
+('1','Ali Hassan','9876543210'),
+('2', 'Fatima Noor', '9871234560');
+
+Insert Into Book (Book_ID, Book_Title, Author_ID )
+Values 
+('B101','Database Systems', '1'),
+('B205','Data Science','2'),
+('B305','Python Basics','3');
+
+
+Insert Into Borrow ( Borrow_ID, Member_ID, Book_ID, Borrow_Date)
+Values
+('201','1','B101','2025-01-10'),
+('202','2','B205','2025-01-12'),
+('203','1','B305','2025-01-10');
+
+Insert Into Returns (Borrow_ID,Retrun_Date,Fine_Amount)
+Values
+('201','2025-01-20','0'),
+('202','2025-01-25','5'),
+('203','2025-01-22','2');
